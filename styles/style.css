@@ -104,3 +104,32 @@ courses style
     color: #AEAEAE;
     opacity: 0.25;
 }
+
+/*Media queries------------*/
+/*---mobile phone---*/
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+}
+/*-----tablets----*/
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
