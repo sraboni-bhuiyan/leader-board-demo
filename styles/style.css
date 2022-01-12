@@ -3,11 +3,20 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #f3f1ff;
+    margin: 0;
 }
-main{
+main, header{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+header{
+    background-color: #562EFF;
+    color: white;
+}
+.heading-container{
+    width: 940px;
+    padding: 10px 0 15px 0;
 }
 .container{
     background-color: #ffffff;
@@ -19,6 +28,45 @@ main{
 hr{
     border: 1px solid #D1D1D1;
     margin-bottom: 27px;
+}
+/*Nav Bar- header part 
+.heading-section{
+    width: 100%;
+}
+.heading-container{   
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+.heading-container img{
+    width: 50px;
+    height: 50px;
+}
+
+*/
+.menu-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+}
+.icon{
+    width: 40px;
+    height: 51px;
+}
+.logo, .menu{
+    display: flex;
+    align-items: center;
+}
+.logo h3{
+    margin-left: 10px;
+}
+.menu{
+    padding-left: 200px;
+}
+.menu p{
+    margin-right: 36px;
 }
 /* top player */
 .top-players{
@@ -124,7 +172,7 @@ courses style
 /*Media queries------------*/
 /*---mobile phone---*/
 @media only screen and (max-width:688px) {
-    .container{
+    .container, .heading-container{
         width: 100%;
     }
     .players, .blogs, .courses{
@@ -136,7 +184,7 @@ courses style
 }
 /*-----tablets----*/
 @media only screen and (min-width:688px) and (max-width:992px) {
-    .container{
+    .container, .heading-container{
         width: 100%;
     }
     .players, .courses{
